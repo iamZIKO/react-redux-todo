@@ -48,16 +48,16 @@ class App extends React.Component {
   //   this.setState({ form: { ...this.state.form, input: str } })
   // }
 
-  addTodo() {
-    if (this.state.form.input) {
-      this.setState({ todos: [...this.state.todos, { id: uuidv1(), todo: this.state.form.input, completed: false }] })
-      // // todo: =>
-      this.setState({ form: { input: "", error: false } })
-    } else {
-      // // todo: => 
-      this.setState({ form: { input: '', error: true } })
-    }
-  }
+  // addTodo() {
+  //   if (this.state.form.input) {
+  //     this.setState({ todos: [...this.state.todos, { id: uuidv1(), todo: this.state.form.input, completed: false }] })
+  //     // // todo: =>
+  //     this.setState({ form: { input: "", error: false } })
+  //   } else {
+  //     // // todo: => 
+  //     this.setState({ form: { input: '', error: true } })
+  //   }
+  // }
 
   // removeTodo(id) {
   //   const filteredArr = this.state.todos.filter(el => el.id !== id)
@@ -101,9 +101,6 @@ const mapStateToProps = (state) => ({
   todos: state.todoState
 })
 
-const mapDispatchToProps = {
-
-}
-
+const mapDispatchToProps = () => { }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)
